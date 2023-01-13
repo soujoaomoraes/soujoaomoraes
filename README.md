@@ -1,4 +1,4 @@
-# Hi, I'm João! 👋 Back-end Developer jr.
+# Hi, I'm João! 👋 Back-end Developer.
  
 ## Intro
 
