@@ -7,7 +7,7 @@ Developer since 2022, working mainly in JavaScript projects, using:
 - Node.js
 - Express
 - Prisma
-- Postigresql
+- Postgresql
 - Prettier and ESlint
 
 
