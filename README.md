@@ -5,5 +5,5 @@ Gosto de explorar novas ferramentas, automatizar processos e criar soluções ú
 
 ## 🚀 Repositórios
 
-<!-- start: repos-list -->
-<!-- end: repos-list -->
+<!--start: repos-list-->
+<!--end: repos-list-->
