@@ -5,7 +5,5 @@ Gosto de explorar novas ferramentas, automatizar processos e criar soluções ú
 
 ## 🚀 Repositórios
 
-Aqui estão alguns dos meus projetos mais recentes:
-
 <!-- start: repos-list -->
 <!-- end: repos-list -->
