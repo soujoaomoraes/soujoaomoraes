@@ -17,8 +17,8 @@ jobs:
         uses: koj-co/readme-repos-list@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          query: "user:SEU_USUARIO"
-          max: 10  # quantos repos listar (você define)
+          query: "user:soujoaomoraes"
+          max: 5  # quantos repos listar (você define)
 
       - name: Commit e push se houver mudanças
         run: |
