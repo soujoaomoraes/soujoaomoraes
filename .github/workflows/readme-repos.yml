@@ -2,26 +2,32 @@ name: Atualizar lista de repositórios
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # roda todo dia à meia-noite
+    - cron: "0 0 * * *"  # Corrigido: era "0 0 * **", agora é "0 0 * * *"
   push:
-    paths:
-      - README.md
+    branches: [ main ]  # Adicionado: especifica a branch
+  workflow_dispatch:  # Permite execução manual para testes
 
 jobs:
   update-repos:
     runs-on: ubuntu-latest
+    permissions:  # Adicionado: permissions necessárias
+      contents: write
+      
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Atualizar lista de repositórios
         uses: koj-co/readme-repos-list@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           query: "user:soujoaomoraes"
-          max: 5  # quantos repos listar (você define)
-
+          max: 5
+          
       - name: Commit e push se houver mudanças
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git diff --exit-code || (git commit -am "✨ Atualiza lista de repositórios" && git push)
+          git add .
+          git diff --staged --quiet || (git commit -m "✨ Atualiza lista de repositórios" && git push)
