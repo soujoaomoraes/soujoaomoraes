@@ -12,4 +12,4 @@ Olá! Sou um desenvolvedor apaixonado por tecnologia, inovação e aprendizado c
 - [estudos](https://github.com/soujoaomoraes/estudos) - Este é um repositório para armazenar os meus Estudos. Aqui você encontrará códigos de exemplo, anotações e outros materiais relacionados.
 - [nlw-esports-explorer](https://github.com/soujoaomoraes/nlw-esports-explorer) - Projeto construido durante o evento da Next Level Week da Rocketseat.
 
-*Última atualização: 29/07/2025 às 18:57 UTC*
+*Última atualização: 29/07/2025 às 18:59 UTC*
