@@ -2,32 +2,66 @@ name: Atualizar lista de repositórios
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Corrigido: era "0 0 * **", agora é "0 0 * * *"
+    - cron: "0 0 * * *"  # Executa diariamente à meia-noite UTC
   push:
-    branches: [ main ]  # Adicionado: especifica a branch
-  workflow_dispatch:  # Permite execução manual para testes
+    branches: [ main ]
+  workflow_dispatch:  # Permite execução manual
 
 jobs:
   update-repos:
     runs-on: ubuntu-latest
-    permissions:  # Adicionado: permissions necessárias
+    permissions:
       contents: write
       
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Atualizar lista de repositórios
-        uses: koj-co/readme-repos-list@master
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          query: "user:soujoaomoraes"
-          max: 5
+          node-version: '18'
+          
+      - name: Buscar repositórios e atualizar README
+        run: |
+          # Busca repositórios via API do GitHub
+          REPOS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/soujoaomoraes/repos?sort=updated&per_page=10" | \
+            jq -r '.[] | select(.fork == false) | "- [\(.name)](\(.html_url)) - \(.description // "Sem descrição")"' | \
+            head -5)
+          
+          # Cria o novo conteúdo do README
+          cat > README.md << 'EOF'
+          **👋 Sobre mim**
+          
+          Olá! Sou um desenvolvedor apaixonado por tecnologia, inovação e aprendizado constante. Gosto de explorar novas ferramentas, automatizar processos e criar soluções úteis no dia a dia.
+          
+          **🚀 Repositórios**
+          
+          *Lista atualizada automaticamente via GitHub Actions*
+          
+          EOF
+          
+          # Adiciona a lista de repositórios
+          echo "$REPOS" >> README.md
+          
+          # Adiciona timestamp
+          echo "" >> README.md
+          echo "*Última atualização: $(date -u '+%d/%m/%Y às %H:%M UTC')*" >> README.md
           
       - name: Commit e push se houver mudanças
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git diff --staged --quiet || (git commit -m "✨ Atualiza lista de repositórios" && git push)
+          git add README.md
+          
+          # Verifica se há mudanças para commitar
+          if git diff --staged --quiet; then
+            echo "Nenhuma mudança detectada"
+          else
+            git commit -m "✨ Atualiza lista de repositórios automaticamente"
+            git push
+            echo "README atualizado com sucesso!"
+          fi
