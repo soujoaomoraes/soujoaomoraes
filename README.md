@@ -6,10 +6,10 @@ Olá! Sou um desenvolvedor apaixonado por tecnologia, inovação e aprendizado c
 
 *Lista atualizada automaticamente via GitHub Actions*
 
+- [weather-dashboard](https://github.com/soujoaomoraes/weather-dashboard) - Dashboards meteorológico sobre o clima e tempo
 - [soujoaomoraes](https://github.com/soujoaomoraes/soujoaomoraes) - Read.me do meu repositório no github
-- [whats-desk-contacts](https://github.com/soujoaomoraes/whats-desk-contacts) - Sem descrição
 - [noto-git-notes](https://github.com/soujoaomoraes/noto-git-notes) - Sem descrição
 - [noto-test](https://github.com/soujoaomoraes/noto-test) - noto-test
 - [asteroid-forge-idle](https://github.com/soujoaomoraes/asteroid-forge-idle) - Projeto para testar a construção de um jogo usando o node.js
 
-*Última atualização: 08/08/2025 às 01:12 UTC*
+*Última atualização: 09/08/2025 às 01:06 UTC*
