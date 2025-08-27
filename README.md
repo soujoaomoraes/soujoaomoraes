@@ -6,10 +6,10 @@ Olá! Sou um desenvolvedor apaixonado por tecnologia, inovação e aprendizado c
 
 *Lista atualizada automaticamente via GitHub Actions*
 
-- [soujoaomoraes](https://github.com/soujoaomoraes/soujoaomoraes) - Read.me do meu repositório no github
 - [church-volunteer-checkin](https://github.com/soujoaomoraes/church-volunteer-checkin) - Sem descrição
+- [soujoaomoraes](https://github.com/soujoaomoraes/soujoaomoraes) - Read.me do meu repositório no github
 - [weather-dashboard](https://github.com/soujoaomoraes/weather-dashboard) - Dashboards meteorológico sobre o clima e tempo
 - [noto-git-notes](https://github.com/soujoaomoraes/noto-git-notes) - Sem descrição
 - [noto-test](https://github.com/soujoaomoraes/noto-test) - noto-test
 
-*Última atualização: 26/08/2025 às 01:03 UTC*
+*Última atualização: 27/08/2025 às 01:01 UTC*
