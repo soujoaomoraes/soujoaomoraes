@@ -1,6 +1,8 @@
 **👋 Sobre mim**
 
-Olá! Sou um desenvolvedor apaixonado por tecnologia, inovação e aprendizado constante. Gosto de explorar novas ferramentas, automatizar processos e criar soluções úteis no dia a dia.
+Olá! Bem vindo!
+
+Sou um apaixonado por tecnologia e por soluções inovadoras. Meu hobby é experimentar: criar pequenos projetos, validar ideias, integrar sistemas e desenvolver soluções úteis até para tarefas simples do cotidiano. Inovação não está apenas em grandes produtos, mas também nas melhorias contínuas e na mentalidade de evolução constante.
 
 **🚀 Repositórios**
 
