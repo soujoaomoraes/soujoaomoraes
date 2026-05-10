@@ -29,20 +29,20 @@ jobs:
           # Busca repositórios via API do GitHub
           REPOS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/users/soujoaomoraes/repos?sort=updated&per_page=10" | \
-            jq -r '.[] | select(.fork == false) | "| 🔹 [\(.name)](\(.html_url)) | \(.description // "No description") | `\(.language // "N/A")` |"' | \
+            jq -r '.[] | select(.fork == false) | "| 🔹 [\(.name)](\(.html_url)) | \(.description // "Sem descrição") | `\(if .language == "HTML" then "JavaScript" else (.language // "N/A") end)` |"' | \
             head -4)
 
           # Cria o novo conteúdo do README
           cat > README.md << 'EOF'
-          ## 👋 About Me
+          ## 👋 Sobre mim
 
-          Hi! I'm passionate about technology. From time to time, you'll find new experiments and projects here 
+          Sou apaixonado por tecnologia! De vez em quando aparecem alguns projetos e experimentos novos por aqui xD
 
-          ## 🚀 Projects
+          ## 🚀 Projetos
 
-          > Automatically updated via GitHub Actions
+          > Lista atualizada automaticamente via GitHub Actions
 
-          | Project | Description | Language |
+          | Projeto | Descrição | Linguagem |
           |---|---|---|
           EOF
 
@@ -54,7 +54,7 @@ jobs:
           echo "" >> README.md
           echo "<div align=\"center\">" >> README.md
           echo "" >> README.md
-          echo "📌 Last automatic update: **$(date -u '+%d/%m/%Y at %H:%M UTC')**" >> README.md
+          echo "📌 Última atualização automática: **$(date -u '+%d/%m/%Y às %H:%M UTC')**" >> README.md
           echo "" >> README.md
           echo "</div>" >> README.md
 
@@ -68,7 +68,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Nenhuma mudança detectada"
           else
-            git commit -m "✨ Automatically update repositories list"
+            git commit -m "✨ Atualiza lista de repositórios automaticamente"
             git push
-            echo "README updated successfully!"
+            echo "README atualizado com sucesso!"
           fi
