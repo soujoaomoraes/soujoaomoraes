@@ -1,6 +1,6 @@
 ## 👋 About Me
 
-Hi! I'm passionate about technology, automation and building useful things. From time to time, you'll find new experiments and projects here 
+Hi! I'm passionate about technology. From time to time, you'll find new experiments and projects here 
 
 ## 🚀 Projects
 
@@ -16,6 +16,6 @@ Hi! I'm passionate about technology, automation and building useful things. From
 
 <div align="center">
 
-📌 Last automatic update: **10/05/2026 at 11:22 UTC**
+📌 Last automatic update: **10/05/2026 at 11:24 UTC**
 
 </div>
