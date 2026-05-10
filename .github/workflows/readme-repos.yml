@@ -29,23 +29,21 @@ jobs:
           # Busca repositórios via API do GitHub
           REPOS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/users/soujoaomoraes/repos?sort=updated&per_page=10" | \
-            jq -r '.[] | select(.fork == false) | "| 🔹 [\(.name)](\(.html_url)) | \(.description // "Sem descrição") | `\(.language // "N/A")` |"' | \
+            jq -r '.[] | select(.fork == false) | "| 🔹 [\(.name)](\(.html_url)) | \(.description // "No description") | `\(.language // "N/A")` |"' | \
             head -4)
 
           # Cria o novo conteúdo do README
           cat > README.md << 'EOF'
-          ## 👋 Sobre mim
+          ## 👋 About Me
 
-          Olá! Sou uma pessoa apaixonada por tecnologia, automação e inovação.  
-          Gosto de criar soluções práticas, explorar novas ferramentas e transformar ideias em produtos funcionais.
+          Hi! I'm passionate about technology, automation and building useful things.  
+          From time to time, you'll find new experiments and projects here 🚀
 
-          
+          ## 🚀 Featured Projects
 
-          ## 🚀 Projetos em destaque
+          > Automatically updated via GitHub Actions
 
-          > Lista atualizada automaticamente via GitHub Actions
-
-          | Projeto | Descrição | Linguagem |
+          | Project | Description | Language |
           |---|---|---|
           EOF
 
@@ -54,11 +52,10 @@ jobs:
 
           # Adiciona timestamp
           echo "" >> README.md
-          echo "---" >> README.md
           echo "" >> README.md
           echo "<div align=\"center\">" >> README.md
           echo "" >> README.md
-          echo "📌 Última atualização automática: **$(date -u '+%d/%m/%Y às %H:%M UTC')**" >> README.md
+          echo "📌 Last automatic update: **$(date -u '+%d/%m/%Y at %H:%M UTC')**" >> README.md
           echo "" >> README.md
           echo "</div>" >> README.md
 
@@ -72,7 +69,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Nenhuma mudança detectada"
           else
-            git commit -m "✨ Atualiza lista de repositórios automaticamente"
+            git commit -m "✨ Automatically update repositories list"
             git push
-            echo "README atualizado com sucesso!"
+            echo "README updated successfully!"
           fi
