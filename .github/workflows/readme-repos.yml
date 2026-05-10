@@ -40,7 +40,6 @@ jobs:
 
           ## 🚀 Projetos
 
-          > Lista atualizada automaticamente via GitHub Actions
 
           | Projeto | Descrição | Linguagem |
           |---|---|---|
@@ -54,7 +53,7 @@ jobs:
           echo "" >> README.md
           echo "<div align=\"center\">" >> README.md
           echo "" >> README.md
-          echo "📌 Última atualização automática: **$(date -u '+%d/%m/%Y às %H:%M UTC')**" >> README.md
+          echo "📌 Última atualização via GitHub Actions: **$(date -u '+%d/%m/%Y às %H:%M UTC')**" >> README.md
           echo "" >> README.md
           echo "</div>" >> README.md
 
