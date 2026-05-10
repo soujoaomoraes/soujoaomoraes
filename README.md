@@ -1,9 +1,8 @@
 ## 👋 About Me
 
-Hi! I'm passionate about technology, automation and building useful things.  
-From time to time, you'll find new experiments and projects here 🚀
+Hi! I'm passionate about technology, automation and building useful things. From time to time, you'll find new experiments and projects here 
 
-## 🚀 Featured Projects
+## 🚀 Projects
 
 > Automatically updated via GitHub Actions
 
@@ -17,6 +16,6 @@ From time to time, you'll find new experiments and projects here 🚀
 
 <div align="center">
 
-📌 Last automatic update: **10/05/2026 at 11:19 UTC**
+📌 Last automatic update: **10/05/2026 at 11:22 UTC**
 
 </div>
