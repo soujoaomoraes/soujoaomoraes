@@ -36,7 +36,7 @@ jobs:
           cat > README.md << 'EOF'
           ## 👋 About Me
 
-          Hi! I'm passionate about technology, automation and building useful things. From time to time, you'll find new experiments and projects here 
+          Hi! I'm passionate about technology. From time to time, you'll find new experiments and projects here 
 
           ## 🚀 Projects
 
