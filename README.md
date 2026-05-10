@@ -1,8 +1,8 @@
-## 👋 Sobre mim
+### 👋 Sobre mim
 
 Sou apaixonado por tecnologia! De vez em quando aparecem alguns projetos e experimentos novos por aqui xD
 
-## 🚀 Projetos
+### 🚀 Projetos
 
 
 | Projeto | Descrição | Linguagem |
@@ -15,6 +15,6 @@ Sou apaixonado por tecnologia! De vez em quando aparecem alguns projetos e exper
 
 <div align="center">
 
-📌 Última atualização via GitHub Actions: **10/05/2026 às 11:33 UTC**
+📌 Última atualização via GitHub Actions: **10/05/2026 às 11:46 UTC**
 
 </div>
