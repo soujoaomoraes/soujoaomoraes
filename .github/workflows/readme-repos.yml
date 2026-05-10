@@ -34,14 +34,14 @@ jobs:
 
           # Cria o novo conteúdo do README
           cat > README.md << 'EOF'
-          # 👋 Sobre mim
+          ## 👋 Sobre mim
 
-          Olá! Sou desenvolvedor apaixonado por tecnologia, automação e inovação.  
+          Olá! Sou uma pessoa apaixonada por tecnologia, automação e inovação.  
           Gosto de criar soluções práticas, explorar novas ferramentas e transformar ideias em produtos funcionais.
 
-          ---
+          
 
-          # 🚀 Projetos em destaque
+          ## 🚀 Projetos em destaque
 
           > Lista atualizada automaticamente via GitHub Actions
 
