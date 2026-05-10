@@ -1,11 +1,11 @@
-# 👋 Sobre mim
+## 👋 Sobre mim
 
-Olá! Sou desenvolvedor apaixonado por tecnologia, automação e inovação.  
+Olá! Sou uma pessoa apaixonada por tecnologia, automação e inovação.  
 Gosto de criar soluções práticas, explorar novas ferramentas e transformar ideias em produtos funcionais.
 
----
 
-# 🚀 Projetos em destaque
+
+## 🚀 Projetos em destaque
 
 > Lista atualizada automaticamente via GitHub Actions
 
@@ -20,6 +20,6 @@ Gosto de criar soluções práticas, explorar novas ferramentas e transformar id
 
 <div align="center">
 
-📌 Última atualização automática: **10/05/2026 às 11:08 UTC**
+📌 Última atualização automática: **10/05/2026 às 11:14 UTC**
 
 </div>
