@@ -34,11 +34,11 @@ jobs:
 
           # Cria o novo conteúdo do README
           cat > README.md << 'EOF'
-          ### 👋 Sobre mim
+          ## 👋 Sobre mim
 
           Sou apaixonado por tecnologia! De vez em quando aparecem alguns projetos e experimentos novos por aqui xD
 
-          ### 🚀 Projetos
+          ## 🚀 Projetos
 
 
           | Projeto | Descrição | Linguagem |
